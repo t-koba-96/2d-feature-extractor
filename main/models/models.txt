@@ -1,0 +1,12 @@
+
+[Model output shapes]
+
+・resnet50, resnet101
+    - with spatial_feature : batch * 2048 * 7 * 7
+    - without spatial_feature : batch * 2048
+
+・vgg16
+    - with spatial_feature : batch * 512 * 7 * 7
+    - without spatial_feature : batch * 25088
+
+    

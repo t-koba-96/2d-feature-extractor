@@ -5,8 +5,8 @@ from PIL import Image
 import torchvision.transforms as transforms
 
 
-class Image_dset(object):
-    def __init__(self, video_root, image_size):
+class Image_dataset(object):
+    def __init__(self, video_root, image_size = 224):
 
         self.root = video_root
         self.imgs = list(sorted(os.listdir(video_root)))
@@ -22,7 +22,6 @@ class Image_dset(object):
         img_path = os.path.join(self.root, self.imgs[idx])
         img = Image.open(img_path).convert("RGB")
         img_name = img_path
-        
         img = self.spatial_transform(img)
 
         return img , img_name
